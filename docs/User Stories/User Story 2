@@ -1,0 +1,7 @@
+2. As a logged-in user, I want to choose and modify my preferences based on provided tags at any time so the app can locate related places.
+Description: The app will provide some tags like “movie, theater, concert, gym, live house, museum, restaurant, dessert store…”. 
+From the provided tags, the user will be able to pick as many tags as they want to specify their preferences. 
+For example, for a restaurant, a user could specify if they want a cheaper location or an expensive one, as well as what kinds of food they are looking for. 
+Also, there will be a limited number of negative preference tags like “no alcohol,” which provide initial restrictions for the recommendation algorithm. 
+When successful, the app will create a list of places that the user might be interested in based on their preferences. 
+If unsuccessful, the user will have to go through choosing their preferences again.

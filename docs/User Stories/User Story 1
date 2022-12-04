@@ -1,0 +1,8 @@
+1. As a user, I would like to log in to my account so I can access my personal information and preferences. 
+Description: Each user should be able to log into their own account with a username and password. 
+The app should identify and authenticate each user’s login information. 
+If successful, the user is able to access their profile and use the app. 
+Also, the user should be able to change the password if they want to, or reset the password with their phone number if they forget the original password. 
+From there, the user can change personal information on their profile: for example, a user can change their name on the profile and upload a picture as their personal icon. 
+These changes, and any other actions or updates the user makes, should persist between logins of the app. 
+If not successful, the app will prompt the user to try and log in again.

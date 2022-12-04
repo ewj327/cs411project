@@ -1,0 +1,7 @@
+5. As a logged-in user, I want to be able to review and make reflections on the places I visited so that the app can recommend more fitting places in the future.
+Description: After a user has visited all of their recommended locations in a given path, the user will be asked to rate each location they visited. (They can also choose not to answer). 
+For example, if the recommended places are “bar, movie theater, Italian restaurant”, the user will be asked whether they like and dislike one or more of the places recommended. 
+After the user's reflection, the app will store the ratings of each preference in this round of recommendations and weigh the preferences differently. 
+The recommendations the user gets next time will be influenced by the stored weights of all preferences. 
+That is to say, the app will update the weight of preferences for each round of recommendations.
+If this process fails, an error message will be thrown and the user will be prompted to rate a given location again.

@@ -1,0 +1,4 @@
+As a logged-in user, I would like to store a wishlist of places I might not be able to go to right away so that I can visit them in the future.
+Description: When the app recommends locations to the user after examining preferences, the user has the choice of either selecting a location to go to it right away or storing it in a “wishlist” if the user might like to visit it later. 
+Additionally, when recommending future places to the user, the app will consider the locations in the wishlist and use those locations’ preferences to influence future places to suggest. 
+If this process fails, error message will be thrown. The wishlist will not be updated and it will not influence future recommendations.

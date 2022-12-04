@@ -1,0 +1,43 @@
+CS411 B4 Group 5
+1. Find available bathrooms near you and options to rate and comment on them
+  - Descriptionn:
+  The users of this application can have an option to rate and comment on the accessibility/sanitary condition on the nearby restrooms.
+  The ratings and comments on specified restrooms will be stored as the database.
+  Two publicly available data sets (will add more later) would be
+  1. official public restrooms information in Boston https://www.boston.gov/departments/311/public-restrooms-city-boston
+  and 2. Boston buildings for locations of other restrooms besides public bathrooms https://data.boston.gov/dataset/boston-buildings. 
+  - Database: location, opening time & close time, access ability
+
+2. Search by name and categories to find places.
+  - Description:
+  The user of this application can login and search some place by name, then show the place on google map.
+  - API
+  positionstack: https://positionstack.com/documentation
+  google map api: key=AIzaSyBPrTlR4ZBf5sFa4uEiPDtZ1OY_6wzj0i4
+  
+2. Create a profile, upload the preference, and the app can generate the nearest place within your interest. 
+Ex. cafe, aquarium, grader…. Suitable for dating or any acquaintances that are not familiar with each other.
+
+  - Description:
+    The user of this application can create a profile and upload the preference of their activity, and let the app stores it in personal data base.
+    Then, while using the app, it will pull out the open places in a certain radius near the user based on their preference, and randomly choose from preferences.
+    The locations provided are drawed from the public database of local city, and presented basinng on the user's preference.
+    Also, if you enter several stops, it can automatically rearrange the path with the shortest detour.
+  - Database: 
+    location, opening time & close time, accessibility.
+    database that stores various type of preferences.
+  - API Database: 
+    * crime statistics from the FBI (considering the security of this place recommended)
+    * 0effort Coordinates Distance: Calculate the distance between any two coordinates on the map, 
+                                    and express the calculation in different measurement units.
+      https://www.programmableweb.com/api/0effort-coordinates-distance
+    * OpenStreetMap API: a free wiki world map, an open volunteer-driven initiative to collaboratively create a map of the world, 
+                         and release the map data under a free and open license
+      https://www.programmableweb.com/api/openstreetmap
+    * Targomo Routing: get detailed routing information for car, bike, walk and transit.
+      https://www.programmableweb.com/api/targomo-routing
+      
+    - tech:
+      Back end: Python
+      Front end: React
+      Database: SQL

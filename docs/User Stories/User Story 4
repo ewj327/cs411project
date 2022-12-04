@@ -1,0 +1,5 @@
+4. As a logged-in user, I want the app to find the shortest path between all the places it has generated for me so I can easily visit each location.
+Description: Once the user has picked several locations that they want to visit, they can click on a “Go” button so that the app can recommend a route to visit each location. 
+When successful, the app should generate the shortest possible route that gets to all of the locations listed. 
+The user should be able to pick whether the route would be by walking or by taking a car (or some other kind of public transportation). 
+If the app cannot generate such a path, it should let the user know which location cannot be included in the path and recommend an alternative route without the offending location.

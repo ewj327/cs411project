@@ -1,0 +1,9 @@
+
+Secondary stories for user story 6:
+1. I would like to be able to add/delete any preferences in my profile after the initial round of setting preferences to keep my preferences up-to-date. 
+
+2. I wish to see the most saved/visited places by other users so that I can decide to go to a place on my own if it is popular.
+
+3. There will also be a favorite list for each user. 
+  Description: The user can store a location they have been to their favorite list, then next time choose this place without “recommendation”. 
+  Also, this favorite list will be used for the app to find the popularity of a location and weigh it greater than other places as the initial weight.

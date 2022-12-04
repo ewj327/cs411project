@@ -1,0 +1,7 @@
+3. As a logged-in user, I want the app to generate the places that are open within a specific radius around me when I click a button so I can find the places recommended for me.
+Description: Once the logged-in users specify their preferences, the app is almost ready to generate a list of places based on those preferences. 
+First, the user will have to choose a specific radius, or distance from their current location, that the app will use as an upper bound when picking places to recommend. 
+If the user makes the radius larger or smaller, that will affect the places the app can draw from. 
+The user can also specify the units of measurement to use for the radius (and for the path the user should take): either miles or kilometers. 
+After specifying the radius and unit, the logged-in user can click on the button “Find me relevant locations” and the app will automatically search the database with locations that satisfy the given preferences and list them all within the given radius. 
+If this is not successful, the user will just be prompted to try and click the button again.
