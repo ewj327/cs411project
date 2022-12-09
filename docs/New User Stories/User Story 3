@@ -1,0 +1,7 @@
+3. As a logged-in user, I want to be able to narrow my search down based on specific tags so that the app can show me more specific restaurants.
+Description: 
+The app will delineate restaurants further based on certain metrics. 
+For example, it has categories that sort restaurants by the type of food they serve, so that if a user wants only restaurants that serve Chinese food, or Italian food, they can do that. 
+An additional way to sort restaurants is by price, so that the user can prioritize cheaper restaurants or more expensive restaurants. 
+These tags are built into the app’s database and are not determined/updated by the user. 
+If the user tries to sort the restaurants by a specific tag but it fails, they can do the process over again.
