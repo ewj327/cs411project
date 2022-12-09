@@ -1,0 +1,6 @@
+5. As a logged-in user, I want to be able to put restaurants that I have already visited in a “history” tab so that I can keep track of the restaurants I ate at.
+Description: 
+After a restaurant has been put on your wishlist, if the user wants to remove it from that wishlist after eating at the restaurant then they can move it to a “history” tab. 
+If a restaurant is in your “history” tab, that removes it from any future searches as described in user stories 2 and 3, since the user has already visited that restaurant and does not need to be recommended it a second time. 
+A restaurant can also be removed from a user’s history if it was added there unintentionally. 
+If adding a restaurant to history fails, the user will be prompted to try again.
