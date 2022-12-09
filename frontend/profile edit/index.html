@@ -1,0 +1,99 @@
+<!-- Create a web page with the title 'profile page' -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile Page</title>
+</head>
+<body>
+	<!-- Create a form with the following fields:
+		- First Name
+		- Last Name
+		- Email
+		- Password
+		- Confirm Password
+		- Gender
+		- Date of Birth
+		- Phone Number
+		- Address
+		- City
+		- State
+		- Zip Code
+		- Country
+		- Profile Picture
+		- Submit Button
+	-->
+	<form action="profile.php" method="post" enctype="multipart/form-data">
+		<label>First Name:</label>
+		<input type="text" name="first_name" placeholder="First Name" required><br>
+		<label>Last Name:</label>
+		<input type="text" name="last_name" placeholder="Last Name" required><br>
+		<label>Email:</label>
+		<input type="email" name="email" placeholder="Email" ><br>
+		<label>Password:</label>
+		<input type="password" name="password" placeholder="Password" required><br>
+		<label>Confirm Password:</label>
+		<input type="password" name="confirm_password" placeholder="Confirm Password" required><br>
+		<label>Gender:</label>
+		<input type="radio" name="gender" value="male" required>Male
+		<input type="radio" name="gender" value="female" required>Female<br>
+		<label>Date of Birth:</label>
+		<input type="date" name="dob" required><br>
+		<label>Phone Number:</label>
+		<input type="text" name="phone_number" placeholder="Phone Number" ><br>
+		<label>Address:</label>
+		<input type="text" name="address" placeholder="Address" ><br>
+		<label>City:</label>
+		<input type="text" name="city" placeholder="City" ><br>
+		<label>State:</label>
+		<input type="text" name="state" placeholder="State" ><br>
+		<label>Zip Code:</label>
+		<input type="text" name="zip_code" placeholder="Zip Code" ><br>
+		<label>Country:</label>
+		<input type="text" name="country" placeholder="Country" ><br>
+		<label>Profile Picture:</label>
+		<input type="file" name="profile_picture" ><br>
+		<input type="submit" name="submit" value="Submit">
+	</form>
+<!-- Show the information we gathered-->
+<?php
+// Check if the submit button is clicked
+if(isset($_POST['submit'])){
+    // Get the information from the form
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $confirm_password = $_POST['confirm_password'];
+    $gender = $_POST['gender'];
+    $dob = $_POST['dob'];
+    $phone_number = $_POST['phone_number'];
+    $address = $_POST['address'];
+    $city = $_POST['city'];
+    $state = $_POST['state'];
+    $zip_code = $_POST['zip_code'];
+    $country = $_POST['country'];
+    $profile_picture = $_FILES['profile_picture']['name'];
+    $profile_picture_tmp = $_FILES['profile_picture']['tmp_name'];
+    // Check if the password and confirm password are the same
+    if($password == $confirm_password){
+        // Move the profile picture to the folder
+        move_uploaded_file($profile_picture_tmp, "images/$profile_picture");
+        // Insert the information into the database
+        $insert_query = "INSERT INTO profile (first_name, last_name, email, password, gender, dob, phone_number, address, city, state, zip_code, country, profile_picture) VALUES ('$first_name', '$last_name', '$email', '$password', '$gender', '$dob', '$phone_number', '$address', '$city', '$state', '$zip_code', '$country', '$profile_picture')";
+        $insert_result = mysqli_query($connection, $insert_query);
+        // Check if the information is inserted successfully
+        if($insert_result){
+            echo "Your profile is created successfully!";
+        }
+        else{
+            echo "Your profile is not created successfully!";
+        }
+    }
+    else{
+        echo "Your password and confirm password are not the same!";
+    }
+}
+?>
+
+</body>
+</html>
