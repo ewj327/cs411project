@@ -1,0 +1,7 @@
+2. As a logged-in user, I want to be able to provide my location so that the application can show me nearby restaurants.
+Description: 
+The app will have a search function where a user can input their location. 
+From there, the app will find top-rated restaurants that are within a specific radius of that location. 
+If the user wants to search farther out from that starting location, they can adjust the radius that the app will consider. 
+Each restaurant also has certain tags associated with them that the user can use to refine their search further. 
+If the search is not successful, due to some database error or because the location the user inputted is not valid, they will have to input a new location.
