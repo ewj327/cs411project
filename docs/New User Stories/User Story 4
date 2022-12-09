@@ -1,0 +1,9 @@
+4. As a logged-in user, I want to be able to put restaurants I would like to visit on a wishlist so that I can keep track of the recommendations the app gives me.
+Description: 
+While browsing restaurants, if the user sees a particular restaurant they would really like to visit, they can place that restaurant on a wishlist. 
+Each user has their own wishlist of restaurants that they can maintain. 
+While looking at your wishlist, you can see all the restaurants that are on it as well as their info (the type of food they serve, their hours, etc.) 
+If you decide you no longer want to visit a restaurant, you can take it off your wishlist. 
+If you end up eating at the restaurant, though, you can use a different option to add it to your “history” tab instead. 
+If a restaurant is on your wishlist, you can still see it while searching for restaurants as in user cases 2 and 3, as the app reminds you that you have expressed interest in that restaurant. 
+If adding a restaurant to the wishlist fails, the user will be prompted to try again.
