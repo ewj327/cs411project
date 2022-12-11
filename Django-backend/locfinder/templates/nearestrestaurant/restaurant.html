@@ -1,0 +1,80 @@
+{% extends 'nearestrestaurant/base.html' %}
+
+{% block title %}Restaurant{% endblock %}
+
+{% block body %}
+<h1>{{restaurant_name}}</h1>
+<h3>Phone: {{restaurant_gmap_detail.phone}}</h3>
+<h3>Address: {{restaurant_gmap_detail.address}}</h3>
+<h3>Open Hours:</h3>
+<div class="container-sm">
+    <ul class="list-group list-group-flush">
+        {% for open_hour in processed_hours %}
+            <li class="list-group-item">{{open_hour}}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<table class="table table-bordered align-middle">
+    <tr>
+        <th></th>
+        <th class="col-sm-6">Google Maps</th>
+        <th class="col-sm-6">Yelp</th>
+    </tr>
+    <tr>
+        <td>Rating</td>
+        <td>{{restaurant_gmap_detail.rating}} / 5 stars</td>
+        <td>{{restaurant_yelp_detail.rating}} / 5 stars</td>
+    </tr>
+    <tr>
+        <td># of Ratings</td>
+        <td>{{restaurant_gmap_detail.ratings_num}}</td>
+        <td>{{restaurant_yelp_detail.ratings_num}}</td>
+    </tr>
+    <tr>
+        <td>Price Level</td>
+        <td>{{restaurant_gmap_detail.price_level}}</td>
+        <td>{{restaurant_yelp_detail.price_level}}</td>
+    </tr>
+    <tr>
+        <td>Review 1</td>
+        <td>
+        <p>{{restaurant_gmap_detail.r1_name}}</p>
+        <p>{{restaurant_gmap_detail.r1_score}}</p>
+        <p>{{restaurant_gmap_detail.r1_text}}</p>
+        </td>
+        <td>
+        <p>{{restaurant_yelp_detail.r1_name}}</p>
+        <p>{{restaurant_yelp_detail.r1_score}}</p>
+        <p>{{restaurant_yelp_detail.r1_text}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td>Review 2</td>
+        <td>
+        <p>{{restaurant_gmap_detail.r2_name}}</p>
+        <p>{{restaurant_gmap_detail.r2_score}}</p>
+        <p>{{restaurant_gmap_detail.r2_text}}</p>
+        </td>
+        <td>
+        <p>{{restaurant_yelp_detail.r2_name}}</p>
+        <p>{{restaurant_yelp_detail.r2_score}}</p>
+        <p>{{restaurant_yelp_detail.r2_text}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td>Review 3</td>
+        <td>
+        <p>{{restaurant_gmap_detail.r3_name}}</p>
+        <p>{{restaurant_gmap_detail.r3_score}}</p>
+        <p>{{restaurant_gmap_detail.r3_text}}</p>
+        </td>
+        <td>
+        <p>{{restaurant_yelp_detail.r3_name}}</p>
+        <p>{{restaurant_yelp_detail.r3_score}}</p>
+        <p>{{restaurant_yelp_detail.r3_text}}</p>
+        </td>
+    </tr>
+
+</table>
+{% endblock %}

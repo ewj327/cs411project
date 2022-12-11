@@ -1,0 +1,58 @@
+{% extends 'nearestrestaurant/base.html' %}
+
+{% block title %}Place{% endblock %}
+
+{% block body %}
+
+<h1>You searched {{place}}.</h1>
+
+<h2>Search for the food or the restaurant type you like if they do not appear below.</h2>
+<form action="#" method="post">
+    {% csrf_token %}
+    <input type="text" name="query" id="place">
+    <input type="submit" value="Search">
+</form>
+
+<h2>Top 5 food styles are listed below (sorted by rating).</h2>
+<table class="table table-striped table-hover">
+    <tr>
+        {% for class in restaurant_class %}
+        <th>{{class}}</th>
+        {% endfor %}
+    </tr>
+    {% for food_style in food_styles %}
+    <tr>
+        <td>
+            <a href="/restaurant_type/{{food_style.type}}">
+                <button type="button" class="btn btn-outline-dark btn-sm">{{food_style.type}}</button>
+            </a>
+        </td>
+        <td>{{food_style.avg_rating}}</td>
+        <td>{{food_style.avg_num_ratings}}</td>
+        <td>{{food_style.number}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h2>Top 5 food types are listed below (sorted by rating).</h2>
+<table class="table table-striped table-hover">
+    <tr>
+        {% for class in restaurant_class %}
+        <th>{{class}}</th>
+        {% endfor %}
+    </tr>
+    {% for food_type in food_types %}
+    <tr>
+        <td>
+            <a href="/restaurant_type/{{food_type.type}}">
+                <button type="button" class="btn btn-outline-dark btn-sm">{{food_type.type}}</button>
+            </a>
+        </td>
+        <td>{{food_type.avg_rating}}</td>
+        <td>{{food_type.avg_num_ratings}}</td>
+        <td>{{food_type.number}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

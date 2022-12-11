@@ -1,0 +1,28 @@
+{% extends 'nearestrestaurant/base.html'%}
+
+{% block title %}Restaurant type{% endblock %}
+
+{% block body %}
+<h1>{{restaurant_type}}.</h1>
+<h2>Top 10 restaurants of this type are listed below (sorted by rating).</h2>
+<table class="table table-striped table-hover">
+    <tr>
+        {% for class in restaurant_class %}
+        <th>{{class}}</th>
+        {% endfor %}
+    </tr>
+    {% for restaurant in restaurants %}
+    <tr>
+        <td>
+            <a href="/restaurant/{{restaurant.name}}">
+                <button type="button" class="btn btn-outline-dark btn-sm">{{restaurant.name}}</button>
+            </a>
+        </td>
+        <td>{{restaurant.rating}}</td>
+        <td>{{restaurant.ratings_num}}</td>
+        <td>{{restaurant.price_level}}</td>
+        <td>{{restaurant.address}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
